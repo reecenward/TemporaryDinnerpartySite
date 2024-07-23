@@ -1,16 +1,19 @@
 <div class="navbar">
   <div class="navbar-container">
-    <a class="hero-name" href="/">Dinnerparty</a>
+    <p class="hero-banner" >Full website coming soon</p>
+    <p class="hero-name" >Dinnerparty</p>
   </div>
 </div>
 
 <style>
   .navbar {
     display: flex;
+   
     justify-content: start;
     align-items: center;
     width: 100%;
     position: sticky;
+    top:0;
     z-index: 1;
     background-color: #fffbef;
   }
@@ -18,9 +21,11 @@
   .navbar-container {
     height: 10vh;
     display: flex;
+    flex-direction: column;
     justify-content: space-around;
     align-items: center;
     width: 100%;
+    position: relative;
   }
 
   .hero-name {
@@ -28,8 +33,18 @@
     font-weight: 900;
     font-style: normal;
     color: #4a46ff;
-    text-decoration: none;
+
     font-size: 30px;
+  }
+  .hero-banner {
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+ margin: 0;
+    font-style: normal;
+    color: #4a46ff;
+position: absolute;
+    font-size: 10px;
+    bottom: 1vh;
   }
 
 </style>
