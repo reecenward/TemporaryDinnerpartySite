@@ -406,6 +406,27 @@
 
   .volume-x-icon {
   }
+  video {
+  display: block; /* Removes extra space around the video */
+  width: 100%;
+  height: 100%;
+}
+
+video::-webkit-media-controls {
+  display: none; /* For WebKit browsers (Safari, Chrome) */
+}
+
+video::-moz-media-controls {
+  display: none; /* For Firefox */
+}
+
+video::-ms-media-controls {
+  display: none; /* For Internet Explorer */
+}
+
+video::media-controls {
+  display: none; /* General case */
+}
 </style>
 
 <!-- <link
