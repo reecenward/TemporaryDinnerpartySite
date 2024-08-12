@@ -1,21 +1,26 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import LandingVideo from "../components/home/landing-video.astro";
+import ContentSlider from "../components/home/content-slider.astro";
+import BigLogo from "../components/home/big-logo.astro";
 ---
 
 <Layout
-  title="Dinnerparty"
-  description="Organic social media marketing team"
+  title="Dinnerparty Studio"
+  description="Dinnerparty is a social media marketing and content creation studio, based in South Surrey. We create authentic, engaging content to help businesses grow organically and connect with their audience."
   ogTitle="Dinnerparty"
   ogDescription="Organic social media marketing team"
   ogType="website"
   ogUrl="https://dinnerparty.studio"
   ogImage={"."}
 >
-
-  <LandingVideo/>
-
-
+  <meta
+    name="keywords"
+    content="South Surrey, social media marketing, content creation, organic growth, audience engagement, storytelling, visuals"
+  />
+  <BigLogo />
+  <ContentSlider />
+  <LandingVideo />
 </Layout>
 
 <style>
@@ -23,6 +28,4 @@ import LandingVideo from "../components/home/landing-video.astro";
     font-family: "goudy_bookletter_1911";
     src: url("../../public/font.woff") format("woff");
   }
-
-
-  </style>
+</style>
