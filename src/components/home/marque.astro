@@ -2,17 +2,37 @@
 <div class="marquee">
 
     <div class="track">
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
-        <div class="card"></div>
+        <div class="card">
+            <img src="/1.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="/2.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="/3.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="/4.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="/5.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="/1.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="/2.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="/3.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="/4.jpg" alt="">
+        </div>
+        <div class="card">
+            <img src="/5.jpg" alt="">
+        </div>
+
     </div>
   </div>
   
@@ -36,22 +56,20 @@
         grid-column: span 2;
       }
     
-      .card2 {
-        width: 450px;
-        height: 400px;
-        background-color: #4A46FF;
-        margin-left: 25px;
-        border-radius: 10px;
-        object-fit: fill;
-      }
     
       .card {
         width: 250px;
         height: 400px;
-        background-color: #4A46FF;
-        margin-left: 25px;
+        /* background-color: #4A46FF; */
+        margin-left: 15px;
+    }
+    
+    img{
+        position:absolute;
+        object-fit: cover;
+        width: 250px;
+        height: 400px;
         border-radius: 10px;
-        object-fit: fill;
       }
     
       .marquee {
@@ -92,15 +110,17 @@
   }
   @media only screen and (max-width: 900px) {
     .card{
-      width: 225px;
+      width: 200px;
         height: 300px;
         margin-left: 12.5px;
     }
-    .card2{
-      width: 300px;
-        height: 250px;
-        margin-left: 12.5px;
-    }
+    img{
+        position:absolute;
+        object-fit:cover;
+        width: 200px;
+        height: 300px;
+        border-radius: 10px;
+      }
   }
     </style>
     
