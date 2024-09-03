@@ -5,35 +5,85 @@
 
     <div class="track">
         <div class="card">
-            <img src="/1.jpg" alt="">
+            <img src="/belles.PNG" alt="">
+            <div class="name-wrapper">
+              <h2 class="name">Belle's Cafe</h2>
+              <p class="handle">@belleson32</p>
+              <a href="/portfolio/Belles"  class="button">Read more</a>
+            </div>
         </div>
         <div class="card">
-            <img src="/2.jpg" alt="">
+          <img src="/yellow.PNG" alt="">
+          <div class="name-wrapper">
+            <h2 class="name">Yellow Engineering</h2>
+            <p class="handle">@yellow.xyz</p>
+            <button class="button">Read more</button>
+          </div>
+      </div>
+        <div class="card">
+            <img src="/those.PNG" alt="">
+            <div class="name-wrapper">
+              <h2 class="name">Those Pretzels</h2>
+              <p class="handle">@thosepretzels</p>
+              <button class="button">Read more</button>
+            </div>
         </div>
         <div class="card">
-            <img src="/3.jpg" alt="">
+            <img src="/thomakis.PNG" alt="">
+            <div class="name-wrapper">
+              <h2 class="name">Thomakis Greek Yogurt</h2>
+              <p class="handle">@thomakisyogurt</p>
+              <button class="button">Read more</button>
+            </div>
         </div>
         <div class="card">
-            <img src="/4.jpg" alt="">
+            <img src="/kayoz.PNG" alt="">
+            <div class="name-wrapper">
+              <h2 class="name">KAYOZ</h2>
+              <p class="handle">@kayoz.ca</p>
+              <button class="button">Read more</button>
+            </div>
         </div>
         <div class="card">
-            <img src="/5.jpg" alt="">
+          <img src="/belles.PNG" alt="">
+          <div class="name-wrapper">
+            <h2 class="name">Belle's Cafe</h2>
+            <p class="handle">@belleson32</p>
+            <button class="button">Read more</button>
+          </div>
+      </div>
+      <div class="card">
+        <img src="/yellow.PNG" alt="">
+        <div class="name-wrapper">
+          <h2 class="name">Yellow Engineering</h2>
+          <p class="handle">@yellow.xyz</p>
+          <button class="button">Read more</button>
         </div>
-        <div class="card">
-            <img src="/1.jpg" alt="">
-        </div>
-        <div class="card">
-            <img src="/2.jpg" alt="">
-        </div>
-        <div class="card">
-            <img src="/3.jpg" alt="">
-        </div>
-        <div class="card">
-            <img src="/4.jpg" alt="">
-        </div>
-        <div class="card">
-            <img src="/5.jpg" alt="">
-        </div>
+    </div>
+      <div class="card">
+          <img src="/those.PNG" alt="">
+          <div class="name-wrapper">
+            <h2 class="name">Those Pretzels</h2>
+            <p class="handle">@thosepretzels</p>
+            <button class="button">Read more</button>
+          </div>
+      </div>
+      <div class="card">
+          <img src="/thomakis.PNG" alt="">
+          <div class="name-wrapper">
+            <h2 class="name">Thomakis Greek Yogurt</h2>
+            <p class="handle">@thomakisyogurt</p>
+            <button class="button">Read more</button>
+          </div>
+      </div>
+      <div class="card">
+          <img src="/kayoz.PNG" alt="">
+          <div class="name-wrapper">
+            <h2 class="name">KAYOZ</h2>
+            <p class="handle">@kayoz.ca</p>
+            <button class="button">Read more</button>
+          </div>
+      </div>
 
     </div>
   </div>
@@ -54,24 +104,33 @@
     
       .marquee {
         width: 100%;
-        overflow: hidden;
+        /* overflow:scroll; */
+        overflow-x: scroll;
         grid-column: span 2;
       }
     
     
       .card {
         width: 250px;
-        height: 400px;
-        /* background-color: #4A46FF; */
+        height: 350px;
+        background-color: #e9e6da;
         margin-left: 15px;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
     }
     
     img{
-        position:absolute;
+
         object-fit: cover;
-        width: 250px;
-        height: 400px;
-        border-radius: 10px;
+        width: 150px;
+        height: 150px;
+        border-radius: 1000px;
       }
     
       .marquee {
@@ -82,6 +141,38 @@
         padding-top: 2.5vh;
         padding-bottom: 2.5vh;
         background-color: #fffbef ;
+      }
+
+      .name-wrapper{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+     
+      }
+     
+
+      .name{
+        color: #07005c;
+        font-size: 1rem;
+        margin: 0;
+      }
+      .handle{
+        color: #07005c;
+      }
+      .button{
+        background-color: #4A46FF ;
+color: #fffbef;
+border: none;
+
+border-radius: 10px;
+font-family: "Poppins", sans-serif;
+font-weight: 900;
+font-size: 1rem;
+padding: 10px 40px 10px 40px;
+      }
+      .button:hover{
+        
+        background-color: #07005c;
       }
     
       .track {
@@ -128,5 +219,6 @@
         border-radius: 10px;
       }
   }
+  
     </style>
     

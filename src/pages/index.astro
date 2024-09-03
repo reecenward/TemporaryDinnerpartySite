@@ -3,7 +3,6 @@ import Layout from "../layouts/Layout.astro";
 import LandingVideo from "../components/home/landing-video.astro";
 import ContentSlider from "../components/home/content-slider.astro";
 import BigLogo from "../components/home/big-logo.astro";
-import Marque from "../components/home/marque.astro";
 ---
 
 <Layout
@@ -19,16 +18,9 @@ import Marque from "../components/home/marque.astro";
     name="keywords"
     content="South Surrey, social media marketing, content creation, organic growth, audience engagement, storytelling, visuals"
   />
-  <BigLogo />
-  <ContentSlider />
-  <LandingVideo />
-  <!-- <Marque/> -->
+  <main>
+    <BigLogo />
+    <ContentSlider />
+    <LandingVideo />
+  </main>
 </Layout>
-
-<style>
-  @font-face {
-    font-family: "goudy_bookletter_1911";
-    src: url("../../public/font.woff") format("woff");
-  }
-  
-</style>

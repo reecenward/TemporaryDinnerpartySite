@@ -1,0 +1,127 @@
+<article >
+  <div class="new">
+    <section class="service"></section>
+    <section class="facts-wrapper">
+      <header class="ap-wrapper">
+        <h1 class="ap">Tidbits</h1>
+      </header>
+      <section>
+        <p>Snackable Tips for mastering content on social media</p>
+        <a href="/tidbits">Small Bites of Big Ideas</a>
+      </section>
+    </section>
+  </div>
+</article>
+
+<style>
+  @font-face {
+    font-family: "goudy_bookletter_1911";
+    src: url("../../public/font.woff") format("woff");
+  }
+
+  .ap-wrapper {
+    border-bottom: #fffbef 2px dashed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  
+  }
+
+  .new {
+    background-color: #fffbef;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px;
+    padding: 20px;
+    border-radius: 10px;
+    height: 35vh;
+    width: 100%;
+    color: #101010;
+  }
+
+  article {
+    display: flex;
+    height: 50vh;
+    align-items: center;
+    justify-content: center;
+    padding-top: 5vh;
+  }
+
+  .service {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background-image: url("goot.png");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+  }
+
+  .facts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+
+  }
+
+  .funfacts-button-wrapper {
+    display: flex;
+  }
+
+  
+
+  .ap {
+    font-size: 50px;
+    font-weight: bold;
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    margin: 0;
+  }
+
+  p {
+    font-family: "goudy_bookletter_1911";
+    font-size: 24px;
+  }
+
+  a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    border: none;
+    background-color: #101010;
+    color: #fffbef;
+    font-size: 20px;
+    border-radius: 100px;
+    width: fit-content;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+  }
+
+  a:hover {
+    background-color: #101010;
+    cursor: pointer;
+  }
+
+  @media only screen and (max-width: 800px) {
+    article{
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 5px;
+      padding-top: 5vh;
+    }
+    .new {
+      padding: 10px;
+    }
+    .facts-wrapper {
+      grid-column: span 1; /* Span only one column in a single column layout */
+    }
+    .service {
+      grid-column: span 1; /* Span only one column in a single column layout */
+    }
+    a{
+      font-size: 12px;
+    }
+  }
+</style>

@@ -1,65 +1,39 @@
-
-
-
-<div class="big-logo-wrapper">
-
-    <h1 class="dinnerparty">Dinnerparty</h1>
-    <!-- <img  class="dinnerparty" src="../../../public/2.gif" alt=""/> -->
-    <div class="wrapper">
-      <h2 class="dpn">Your community is your brand.</h2>
-      <!-- <img  class="icon" src="/bbl.png" alt=""/> -->
+<header>
+    <p>Dinnerparty</p>
+    <div>
+      <h1>Your community is your brand.</h1>
     </div>
-
-
-    </div>
-  
-  </div>
-  
+</header>
  
-  
   <style>
-
-
-
     @font-face {
       font-family: "goudy_bookletter_1911";
       src: url("../../public/font.woff") format("woff");
     }
 
-   
-  
-    .wrapper{
+    div{
       position: relative;
     }
-    .icon{
-      position: absolute;
-      width: 100px;
-      z-index: 9999;
-      top:-50px;
-      right: -50px;
-    }
   
-    .big-logo-wrapper {
+    header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      background-color: #4A46FF;
+      background-color: #101010;
       justify-content: center;
       overflow: hidden;
 
     }
-    .dinnerparty {
+    p {
       font-family: "Poppins", sans-serif;
       font-weight: 900;
       font-size: 12vw;
       text-align: center;
       margin: 0;
       color: #fffbef ;
-      /* width: 80vw; */
-
     }
   
-    .dpn {
+    h1{
       font-family: "goudy_bookletter_1911";
       text-align: center;
       font-size: 6vw;
@@ -67,13 +41,13 @@
       color: #fffbef;
     }
     @media only screen and (max-width: 900px) {
-      .big-logo-wrapper {
+      header {
       padding: 15px;
     }
-      .dinnerparty {
+     p{
       font-size: 3rem;
       }
-      .dpn {
+      h1{
        font-size: 40px;
       }
     }
