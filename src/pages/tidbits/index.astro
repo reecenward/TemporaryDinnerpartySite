@@ -62,6 +62,16 @@ const otherPosts = data.data.slice(1);
               id: number;
               attributes: {
                 Title: string;
+                Slug: string;
+                updatedAt: string;
+                Thumbnail: {
+                  data: {
+                    attributes: {
+                      url: string;
+                      alternativeText: string;
+                    }
+                  }
+                }
                 publishedAt: string;
                 Description: string;
               };
