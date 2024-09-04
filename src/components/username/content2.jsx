@@ -89,7 +89,7 @@ const MarkdownContent = ({ content }) => {
     },
     heading: (level) => {
       const baseStyle = {
-        fontFamily: '"Poppins", sans-serif',
+
         color: '#fffbef',
         fontWeight: 900,
         padding: 0,
