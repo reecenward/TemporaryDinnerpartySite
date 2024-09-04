@@ -73,15 +73,15 @@ const MarkdownContent = ({ content }) => {
     '@font-face': [
       {
         fontFamily: 'goudy_bookletter_1911',
-        src: `url(${goudyFont}) format('woff')`,
+        src: `url(${goudyFont}) format('truetype')`,
       },
       {
         fontFamily: 'Poppins',
-        src: `url(${poppinsFont}) format('ttf')`,
+        src: `url(${poppinsFont}) format('truetype')`,
       },
     ],
     paragraph: {
-      fontFamily: '"goudy_bookletter_1911"',
+    
       color: '#fffbef',
       fontSize: '1.5rem',
       margin: 0,
