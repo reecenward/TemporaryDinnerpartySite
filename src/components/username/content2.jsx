@@ -65,8 +65,8 @@
 // export default MarkdownContent;
 
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import goudyFont from "/font.woff";
-import poppinsFont from "/Poppins/public/Poppins/Poppins-Black.ttf";
+import goudyFont from "../../../public/font.woff";
+import poppinsFont from "../../../public/Poppins/public/Poppins/Poppins-Black.ttf";
 
 const MarkdownContent = ({ content }) => {
   const styles = {
