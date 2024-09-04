@@ -1,5 +1,5 @@
 import { BlocksRenderer } from '@strapi/blocks-react-renderer';
-import "/public/styles.css"
+import "../../../public/styles.css"
 const MarkdownContent = ({ content }) => {
   return (
     <BlocksRenderer
