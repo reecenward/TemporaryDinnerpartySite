@@ -77,7 +77,7 @@ const MarkdownContent = ({ content }) => {
       },
       {
         fontFamily: 'Poppins',
-        src: `url(${poppinsFont}) format('woff')`,
+        src: `url(${poppinsFont}) format('ttf')`,
       },
     ],
     paragraph: {
