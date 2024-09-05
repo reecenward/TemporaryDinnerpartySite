@@ -1,5 +1,5 @@
 <article >
-  <div class="new">
+  <div  class="new">
     <section class="service"></section>
     <section class="facts-wrapper">
       <header class="ap-wrapper">
@@ -7,7 +7,7 @@
       </header>
       <section>
         <p>Snackable Tips for mastering content on social media</p>
-        <a href="/tidbits">Small Bites of Big Ideas</a>
+        <a class="button" href="/tidbits">Small Bites of Big Ideas</a>
       </section>
     </section>
   </div>
@@ -20,7 +20,7 @@
   }
 
   .ap-wrapper {
-    border-bottom: #fffbef 2px dashed;
+    border-bottom: #101010 2px dashed;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -54,7 +54,7 @@
     background-image: url("/goot.png");
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
-    background-size: cover;
+    background-size:contain;
   }
 
   .facts-wrapper {
@@ -86,7 +86,7 @@
     font-size: 24px;
   }
 
-  a {
+  .button {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     border: none;
@@ -100,7 +100,7 @@
   }
 
   a:hover {
-    background-color: #101010;
+    /* background-color: #101010; */
     cursor: pointer;
   }
 
@@ -110,18 +110,28 @@
       grid-template-columns: 1fr;
       gap: 5px;
       padding-top: 5vh;
+      height: 30vh;
     }
     .new {
-      padding: 10px;
+padding: 0;
+height: 100%;
     }
     .facts-wrapper {
       grid-column: span 1; /* Span only one column in a single column layout */
+      padding: 10px;
     }
     .service {
       grid-column: span 1; /* Span only one column in a single column layout */
+      background-position: center; 
     }
-    a{
+    .button{
       font-size: 12px;
+    }
+    .ap{
+      font-size: 1.5rem;
+    }
+    p{
+      font-size: 1rem;
     }
   }
 </style>
