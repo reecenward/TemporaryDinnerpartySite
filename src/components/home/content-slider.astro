@@ -13,10 +13,16 @@
               height="100%"
               playsinline
               preload="none"
-              poster="1.jpg"
+             
               muted
               loop
-              src="1.mp4"></video>
+              src="1.mp4">
+            
+                <!-- <source src="files/sample.mp4" type="video/mp4"> -->
+                <!-- Poster image will be lazy-loaded -->
+                <img src="1.jpg" alt="Video placeholder" loading="lazy">
+              </video>
+            </video>
             <div class="custom-controls">
               <button class="play-pause">
                 <img src="/play.svg" alt="Play" class="play-icon" />
@@ -49,10 +55,12 @@
               height="100%"
               playsinline
               preload="none"
-              poster="2.jpg"
+            
               muted
               loop
-              src="/2.mp4"></video>
+              src="/2.mp4">
+              <img src="1.jpg" alt="Video placeholder" loading="lazy">
+            </video>
             <div class="custom-controls">
               <button class="play-pause">
                 <img src="/play.svg" alt="Play" class="play-icon" />
