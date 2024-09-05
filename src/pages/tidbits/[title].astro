@@ -81,6 +81,13 @@ const formatDate = (dateString: string) => {
           }
           
           <MarkdownContent content={post.attributes.Content} />
+          <div class="mirco-service-cta-button-wrapper">
+            <a
+              class="mirco-service-cta-button"
+              target=”_blank”
+              href="https://app.formbricks.com/s/clzu6zoe50000c8nkwg15thwb">Get in touch</a
+            >
+          </div>
       </section>
   </main>
 </Layout>
@@ -172,30 +179,6 @@ const formatDate = (dateString: string) => {
     color: #fffbef;
   }
 
-  .mirco-service-cta-button {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    border: none;
-    background-color: #4a46ff;
-    color: #fffbef;
-    font-size: 20px;
-    width: fit-content;
-    border-radius: 100px;
-    text-decoration: none;
-    padding: 10px 50px 10px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mirco-service-cta-button-wrapper {
-    width: 100%;
-  }
-
-  .mirco-service-cta-button:hover {
-    cursor: pointer;
-    background-color: #07005c;
-  }
 
   .wrapper {
     max-width: 800px;
@@ -233,20 +216,38 @@ const formatDate = (dateString: string) => {
     font-family: "Poppins", sans-serif;
     font-weight: 900;
   }
+  .mirco-service-cta-button {
+    font-family: "Poppins", sans-serif;
+    font-weight: 900;
+    border: none;
+    background-color: #fffbef;
+    color: #101010;
+    font-size: 20px;
+    width:fit-content;
+    border-radius: 100px;
+    text-decoration: none;
+    padding: 10px 50px 10px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mirco-service-cta-button-wrapper {
+    width: 100%;
+    margin-top: 5vh;
+  }
+
+  .mirco-service-cta-button:hover {
+    cursor: pointer;
+  
+  }
 
   @media screen and (max-width: 880px) {
 
     .mirco-service-video-wrapper {
       font-size: 2rem;
     }
-    .mirco-service-cta-button {
-      width: 200px;
-    }
-    .mirco-service-cta-button-wrapper {
-      display: flex;
-      justify-content: center;
-      padding-bottom: 5vh;
-    }
+   
     .wrapper {
     max-width: 100%;
     min-width: 25ch;
@@ -256,6 +257,14 @@ const formatDate = (dateString: string) => {
     min-width: 100%;
     margin-left: 20px;
   }
+  .mirco-service-cta-button {
+      width: 200px;
+    }
+    .mirco-service-cta-button-wrapper {
+      display: flex;
+      justify-content: center;
+      padding-bottom: 5vh;
+    }
 
   }
 </style>
