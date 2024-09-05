@@ -21,7 +21,7 @@
 
   .ap-wrapper {
     border-bottom: #101010 2px dashed;
-    width: 100%;
+    width: 90%;
     display: flex;
     justify-content: space-between;
   
@@ -105,33 +105,42 @@
   }
 
   @media only screen and (max-width: 800px) {
-    article{
-      display: grid;
-      grid-template-columns: 1fr;
-      gap: 5px;
-      padding-top: 5vh;
-      height: 30vh;
-    }
-    .new {
-padding: 0;
-height: 100%;
-    }
-    .facts-wrapper {
-      grid-column: span 1; /* Span only one column in a single column layout */
-      padding: 10px;
-    }
-    .service {
-      grid-column: span 1; /* Span only one column in a single column layout */
-      background-position: center; 
-    }
-    .button{
-      font-size: 12px;
-    }
-    .ap{
-      font-size: 1.5rem;
-    }
-    p{
-      font-size: 1rem;
-    }
+  .new {
+    display: flex;
+    flex-direction: column; /* Stack vertically */
+    padding: 0;
+    height: 100%;
   }
+
+  .service {
+    order: 1; /* Image on top */
+    width: 100%;
+    height: 55vh; /* Adjust height as needed */
+    background-position: center; 
+  }
+
+  .facts-wrapper {
+    order: 2; /* Text and button below */
+  
+    width: 100%;
+    text-align: start;
+    justify-content: start;
+    align-items: start;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  .button {
+    font-size: 1rem;
+  }
+
+  .ap {
+    font-size: 1.5rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+
+}
 </style>
