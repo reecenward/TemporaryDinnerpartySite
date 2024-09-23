@@ -13,7 +13,7 @@
               height="100%"
               playsinline
               preload="none"
-             
+              poster="1.jpg"
               muted
               loop
               src="1.mp4">
@@ -55,7 +55,7 @@
               height="100%"
               playsinline
               preload="none"
-            
+             poster="2.jpg"
               muted
               loop
               src="/2.mp4">
@@ -115,7 +115,7 @@
         </div>
       </div>
     </div>
-
+ 
     <div class="swiper-slide">
       <div class="swiper-video-wrapper">
         <div
@@ -234,14 +234,12 @@
     src: url("/font.woff") format("woff");
   }
 
-
-
   .swiper {
     width: 100%;
     height: auto;
     overflow: hidden;
     position: relative;
-    background-color: #101010;
+ 
     padding-top: 10vh;
     padding-bottom: 10vh;
   }
@@ -276,30 +274,8 @@
     color: #fffbef;
     padding: 10px;
   }
-  .review-wrapper {
-    font-size: 25px;
-    font-weight: bold;
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-style: normal;
-    background-color: #ff4646;
-    color: #5c0000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    border: none;
 
-    border-radius: 100px;
-    width: 400px;
-    height: 100px;
-
-    margin-top: 10px;
-  }
-  .review-wrapper:hover {
-    color: #ff4646;
-    background-color: #5c0000;
-  }
 
   .handle-wrapper {
     display: flex;
@@ -311,7 +287,7 @@
     height: 100%;
     object-fit: contain;
     border-radius: 10px;
-    color: #fffbef;
+   
     position: relative;
     background-color: #07005c;
   }
@@ -333,9 +309,9 @@
   .swiper-slide .swiper-video-wrapper-2:hover {
     opacity: 0.75;
   }
-  .swiper-slide .swiper-video-wrapper:hover {
+  /* .swiper-slide .swiper-video-wrapper:hover {
     opacity: 1;
-  }
+  } */
 
   .swiper-slide.swiper-slide-active .swiper-video-wrapper-2 {
     opacity: 1;
@@ -441,6 +417,13 @@
     speed: 800,
     autoplay: false,
     pauseOnMouseEnter: false,
+    momentumBounce: true,
+    momentum: true,
+
+    mousewheel: {
+      enabled: true,
+      forceToAxis: true,
+    },
     reverseDirection: true,
     spaceBetween: 2,
     freemode: true,

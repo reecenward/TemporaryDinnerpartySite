@@ -1,0 +1,84 @@
+---
+import { Astronav, MenuItems, MenuIcon, Dropdown, DropdownItems, DropdownSubmenu } from "astro-navbar";
+import MainCta from "../myComponents/main-cta.astro";
+---
+
+<div class="md:container md:mx-auto p-3 py-6 ">
+  <header class="lg:flex  gap-5">
+    <Astronav>
+      <div class="flex w-full justify-between">
+        <a href="/">Dinnerparty</a>
+        <div class="block lg:hidden">
+          <MenuIcon class="w-12 h-12" />
+        </div>
+      </div>
+      <MenuItems class="hidden lg:flex w-full">
+        <ul class="flex flex-col sm:flex-row items-center justify-end list-none">
+          <li><a class="al"  href="/studio">Studio</a></li>
+          <li> <a class="al pb-12 sm:pb-0" href="/tidbits">Tidbits</a></li>
+          <li ></li><MainCta/></li>
+      </ul>
+      </MenuItems>
+    </Astronav>
+  </header>
+
+</div>
+
+
+<style>
+  @font-face {
+      font-family: "goudy_bookletter_1911";
+      src: url("/font.woff") format("woff");
+    }
+    span{
+      font-family: "goudy_bookletter_1911";
+    }
+
+
+.nav-links li {
+    display: inline-block;
+}
+
+  
+   .al {
+      padding: 10px 30px 10px 30px;
+      text-decoration: none;
+      font-size: 18px;
+  }
+
+    a{
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-style: normal;
+      text-decoration: none;
+      font-size: 30px;
+      display: flex;
+    }
+    
+    ul{
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+    }
+    li{
+      margin: 0;
+      padding: 0;
+    }
+    .cta{
+      font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        font-size: 1rem;
+        text-align: center;     
+      border: none;
+      color: #fffbef;
+      background-color: #4A46FF;
+  
+  
+      width: fit-content;
+      padding: 10px 30px 10px 30px;
+      text-decoration: none;
+    }
+    </style>

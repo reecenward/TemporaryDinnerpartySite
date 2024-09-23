@@ -1,17 +1,23 @@
-<article >
-  <div  class="new">
-    <section class="service"></section>
-    <section class="facts-wrapper">
-      <header class="ap-wrapper">
-        <h2 class="ap">Tidbits</h2>
-      </header>
-      <section>
-        <h3>Snackable Tips for mastering content on social media</h3>
-        <a class="button" href="/tidbits">Small Bites of Big Ideas</a>
+
+  <article class="md:container md:mx-auto">
+    <div class="new p-3 sm:p-12">
+      <section class="service"></section>
+      <section class="facts-wrapper">
+        <header class="ap-wrapper">
+          <h2 class="ap">Tidbits</h2>
+        </header>
+        <section>
+          <!-- <p>Snackable Tips for mastering content on social media - Quick, actionable insights to help you create engaging posts, grow your audience, and build an authentic online presence—one tip at a time. Perfect for leveling up your content strategy with ease!</p> -->
+          <p>Snackable Tips for to help you create engaging posts, grow your audience, and build an authentic online presence—one tip at a time.</p>
+
+          <div class="my-5">
+          <a class="button text-lg " href="/tidbits">Level Up Your Skills</a>
+          </div>
+        </section>
       </section>
-    </section>
-  </div>
-</article>
+    </div>
+  </article>
+
 
 <style>
   @font-face {
@@ -20,7 +26,7 @@
   }
 
   .ap-wrapper {
-    border-bottom: #101010 2px dashed;
+ 
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -28,23 +34,22 @@
   }
 
   .new {
-    background-color: #fffbef;
+background-color: #fffbef;
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 10px;
-    padding: 20px;
-    border-radius: 10px;
-    height: 35vh;
+  border-radius: 10px;
+    height: 100%;
     width: 100%;
     color: #101010;
   }
 
   article {
     display: flex;
-    height: 50vh;
+ 
     align-items: center;
     justify-content: center;
-    padding-top: 5vh;
+  
   }
 
   .service {
@@ -81,7 +86,7 @@
     margin: 0;
   }
 
-  h3 {
+  p {
     font-family: "goudy_bookletter_1911";
     font-size: 24px;
   }
@@ -92,58 +97,24 @@
     border: none;
     background-color: #101010;
     color: #fffbef;
-    font-size: 20px;
-    border-radius: 100px;
+
+   
     width: fit-content;
     padding: 10px 30px 10px 30px;
     text-decoration: none;
   }
 
   a:hover {
-    /* background-color: #101010; */
+
     cursor: pointer;
   }
 
-  @media only screen and (max-width: 800px) {
-    .ap-wrapper {
-      width: 90%;
+  @media only screen and (max-width: 900px) {
+    p{ font-size: 1rem;}
+    .ap{
+      font-size: 2rem;
     }
-  .new {
-    display: flex;
-    flex-direction: column; /* Stack vertically */
-    padding: 0;
-    height: 100%;
   }
 
-  .service {
-    order: 1; /* Image on top */
-    width: 100%;
-    height: 55vh; /* Adjust height as needed */
-    background-position: center; 
-  }
 
-  .facts-wrapper {
-    order: 2; /* Text and button below */
-  
-    width: 100%;
-    text-align: start;
-    justify-content: start;
-    align-items: start;
-    padding: 10px;
-    margin-bottom: 10px;
-  }
-
-  .button {
-    font-size: 1rem;
-  }
-
-  .ap {
-    font-size: 1.5rem;
-  }
-
-  h3 {
-    font-size: 1rem;
-  }
-
-}
 </style>

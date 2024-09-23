@@ -1,0 +1,100 @@
+
+<div class="service-wrapper">
+    <div class="marquee">
+      <div class="track">
+        <div class="words">
+          <p>SO MANY WAYS TO THROW A PARTY.</p> 
+          <img   decoding="async" class="sparkler px-1"  src="/music2.gif"/>
+        </div>
+        <div class="words">
+          <p>SO MANY WAYS TO THROW A PARTY.</p> 
+          <img   decoding="async" class="sparkler  px-1" src="/sparkler2.gif"/>
+        </div>
+        <div class="words">
+            <p>SO MANY WAYS TO THROW A PARTY.</p> 
+            <img   decoding="async" class="sparkler px-1"  src="/music2.gif"/>
+          </div>
+          <div class="words">
+            <p>SO MANY WAYS TO THROW A PARTY.</p> 
+            <img   decoding="async" class="sparkler px-1" src="/sparkler2.gif"/>
+          </div>
+          <div class="words">
+            <p>SO MANY WAYS TO THROW A PARTY.</p> 
+            <img   decoding="async" class="sparkler px-1"  src="/music2.gif"/>
+          </div>
+          <div class="words">
+            <p>SO MANY WAYS TO THROW A PARTY.</p> 
+            <img   decoding="async" class="sparkler px-1" src="/sparkler2.gif"/>
+          </div>
+       
+      </div>
+    </div>
+    
+  </div>
+  
+  <style>
+    @font-face {
+      font-family: "goudy_bookletter_1911";
+      src: url("../../public/font.woff") format("woff");
+    }
+  
+    .service-text {
+    }
+  
+    .sparkler{
+      width: 50px;
+    }
+  
+    .marquee {
+      grid-column: span 2;
+      position: relative;
+      width: 100vw;
+      height: 30px;
+      overflow: hidden;
+      padding-top: 2vh;
+      padding-bottom: 2vh;
+      display: flex;
+      align-items: center;
+    }
+  
+    .track {
+      position: absolute;
+      white-space: nowrap;
+      will-change: transform;
+      animation: marquee 32s linear infinite;
+      display: flex;
+    }
+    @keyframes marquee {
+      from {
+        transform: translateX(0);
+      }
+      to {
+        transform: translateX(-50%);
+      }
+    }
+    .service-wrapper {
+
+    }
+  
+  
+    .words {
+      display: flex;
+      align-items: center;
+      padding-right: 150px;
+    }
+    p{
+      font-family: "goudy_bookletter_1911";
+      font-size: 20px;
+      font-weight: 600;
+      color: #fffbef;
+     
+      padding-right: 15px;
+    }
+    @media only screen and (max-width: 900px) {
+    .words{
+      font-size: 20px;
+   
+    }
+  }
+  </style>
+  

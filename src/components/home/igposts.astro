@@ -1,0 +1,64 @@
+<section>
+    <div class="marquee">
+        <div class="track">
+          <img src="us1.jpeg" class="card"></img>
+          <img src="us2.jpeg" class="card"></img>
+          <img src="us3.jpeg" class="card"></img>
+          <img src="us4.jpeg" class="card"></img>
+          <img src="us1.jpeg" class="card"></img>
+          <img src="us2.jpeg" class="card"></img>
+          <img src="us3.jpeg" class="card"></img>
+          <img src="us4.jpeg" class="card"></img>
+        </div>
+      </div>
+</section>
+  
+  <style>    
+      .marquee {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+          height: 350px;
+          overflow: hidden;
+          padding-top: 2.5vh;
+          padding-bottom: 2.5vh;
+      }
+          
+      .track {
+        position: absolute;
+        white-space: nowrap;
+        will-change: transform;
+        animation: marquee 60s linear infinite;
+        display: flex;
+      }
+
+        .card {
+          width: 250px;
+          height: 300px;
+          background-color: #fffdf0;
+          margin-left: 15px;
+          border-radius: 10px;
+          object-fit: fill;
+        }
+      
+
+      @keyframes marquee {
+        from {
+          transform: translateX(0);
+        }
+        to {
+          transform: translateX(-50%);
+        }
+      }
+  
+
+  @media only screen and (max-width: 900px) {
+    .card{
+      width: 225px;
+        height: 300px;
+        margin-left: 12.5px;
+    }
+  
+  }
+    </style>
+    

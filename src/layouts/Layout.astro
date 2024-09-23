@@ -1,5 +1,7 @@
 ---
+import  NavBar  from '@/components/home/nav2.astro';
 import { ViewTransitions } from 'astro:transitions';
+import Footer from "../components/home/footer.astro";
 interface Props {
 	title: string;
 	description: string;
@@ -36,9 +38,7 @@ const {
 			 gtag('config', 'G-QRQLFYTGLK');
 		 </script>
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+       
         <ViewTransitions />
 
 			<link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -80,10 +80,9 @@ const {
 	margin: 0;
   -ms-overflow-style: none; /* for Internet Explorer, Edge */
   scrollbar-width: none; /* for Firefox */
-
   padding: 0;
-  background-color: #101010;
-  color: #141414;
+  color: #101010;
+  background-color: hsl(233, 100%, 97%);
 }
 
 body::-webkit-scrollbar {
@@ -92,7 +91,9 @@ body::-webkit-scrollbar {
     
 		</style>
 	</head>
-	<body>	
+	<body class="relitive">	
+		<NavBar/>
 		<slot /> 
+		<Footer/>
 	</body>
 </html>

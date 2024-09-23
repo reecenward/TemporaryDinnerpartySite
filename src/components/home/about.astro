@@ -1,0 +1,78 @@
+---
+import Moving from "./moving.astro"
+import Tipsntricks from "./tipsntricks.astro"
+---
+
+<section class="bg-[#4A46FF] py-12">
+  <Moving/>
+  <div class="md:container md:mx-auto py-12 px-3">
+    <div class="grid grid-cols-1 items-center md:grid-cols-2 col- grid-flow-dense">
+       
+          <div class="flex justify-center">
+            <video class="rounded" poster="./1jpg" loop autoplay muted >
+              <source src="/1.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+      
+            
+            
+            </div>
+            <div class="p-6 sm:p-0">
+              <h2 class="text-4xl sm:text-5xl">What we are all about.</h2>
+              <p class="text-2xl">
+               Just like a dinner party we’re all about bringing people together—bridging the gap between businesses and their communities. 
+                  Now, we’re on a mission to help more Vancouver businesses grow by creating content that not only looks incredible but also builds strong, engaged communities and opens doors to new opportunities.
+              </p>
+              <div class="mt-10">
+                  <a class=" text-lg"  href="/studio">Get to Know Us</a>
+              </div>      
+            </div>
+        </div>
+      </div>
+    </div>
+    <div class="px-3">
+      <Tipsntricks/>
+    </div>
+    <div class="py-6"></div>
+<Moving/>
+</section>
+
+
+<style>
+    @font-face {
+    font-family: "goudy_bookletter_1911";
+    src: url("/font.woff") format("woff");
+  }
+
+
+    h2 {
+      font-family: "Poppins", sans-serif;
+      font-weight: 900;
+
+    }
+  
+    p{
+      font-family: "goudy_bookletter_1911";
+
+    }
+    a{
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        border: none;
+        background-color: #fffbef;
+        color: #4A46FF;
+
+        width:fit-content;
+    
+        text-decoration: none;
+        padding: 10px 50px 10px 50px;  
+    }
+
+    a:hover{
+        cursor: pointer;
+    }
+   
+
+  
+</style>
+

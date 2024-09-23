@@ -1,15 +1,28 @@
-<header>
-  <nav>
-    <ul>
-       <li>
-         <a href="/">Dinnerparty <span>Tidbits</span></a>
-       </li>
-    </ul>
-  </nav>
-</header>
+---
+import MainCta from "../myComponents/main-cta.astro"
+---
+
+<section class=" bg-[#101010]  sticky top-0 z-50">
+    <div class="md:container md:mx-auto py-3">
+        <nav class="flex items-center justify-between">
+            <div class="logo">
+                <a href="/">Dinnerparty</a>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/studio">Studio</a></li>
+                <li><a href="/tidbits">Tidbits</a></li>
+                <li><MainCta/></li>
+            </ul>
+            <div class="burger">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
+        </nav>
+    </div>
+</section>
 
 <style>
-
 @font-face {
     font-family: "goudy_bookletter_1911";
     src: url("/font.woff") format("woff");
@@ -17,6 +30,43 @@
   span{
     font-family: "goudy_bookletter_1911";
   }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+   justify-content: right;
+}
+
+.nav-links li {
+    display: inline-block;
+}
+
+.nav-links a {
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.logo a {
+    text-decoration: none;
+    font-size: 24px;
+}
+
+.burger {
+    display: none;
+}
 
   header {
     position: sticky;
@@ -26,7 +76,7 @@
     align-items: center;
     width: 100%;
     z-index: 99999999999999999999999;
-    background-color: #101010;
+
   }
 
   nav {
@@ -41,7 +91,6 @@
     font-family: "Poppins", sans-serif;
     font-weight: 900;
     font-style: normal;
-    color: #fffbef;
     text-decoration: none;
     font-size: 30px;
     display: flex;
@@ -59,6 +108,147 @@
     margin: 0;
     padding: 0;
   }
-  
-</style>
+  .cta{
+    font-family: "Poppins", sans-serif;
+      font-weight: 900;
+      font-size: 1rem;
+      text-align: center;     
+    border: none;
+    color: #fffbef;
+    background-color: #4A46FF;
 
+
+    width: fit-content;
+    padding: 10px 30px 10px 30px;
+    text-decoration: none;
+  }
+  @media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+      
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        z-index: 999999;
+    }
+
+    .nav-links li {
+        opacity: 0;
+    }
+
+    .burger {
+        display: block;
+        cursor: pointer;
+    }
+
+    .burger div {
+        width: 25px;
+        height: 3px;
+        background-color: #fffbef;
+        margin: 5px;
+        transition: all 0.3s ease;
+    }
+
+    .nav-active {
+        transform: translateX(0);
+    }
+
+    @keyframes navLinkFade {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    .nav-links li {
+        animation: navLinkFade 0.5s ease forwards 0.5s;
+    }
+}
+.toggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+.toggle .line2 {
+    opacity: 0;
+}
+
+.toggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+}
+.nav-links a:focus,
+.nav-links a:hover {
+text-decoration: underline;
+    
+}
+.menu-backdrop {
+    display: none; /* Hidden by default */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 9; /* Ensure it's below the nav-links but above other content */
+}
+.fixed-position {
+    overflow: hidden;
+    height: 100%;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #fffbef;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+nav{
+   justify-content: space-between;
+}
+</style>
+<!-- <script>
+  const burger = document.querySelector('.burger');
+  const navLinks = document.querySelector('.nav-links');
+  const body = document.querySelector('body');
+  const backdrop = document.createElement('div');
+  backdrop.classList.add('menu-backdrop');
+
+  body.appendChild(backdrop);
+
+  burger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+      backdrop.classList.toggle('display'); // Show or hide the backdrop
+
+      // Toggle body scrolling
+      body.classList.toggle('fixed-position');
+      
+      // Burger Animation
+      burger.classList.toggle('toggle');
+  });
+
+  backdrop.addEventListener('click', function() {
+      navLinks.classList.remove('nav-active');
+      this.classList.remove('display'); // Hide the backdrop when clicked
+      body.classList.remove('fixed-position');
+      burger.classList.remove('toggle');
+  });
+</script> -->

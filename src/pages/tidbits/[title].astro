@@ -2,8 +2,8 @@
 export const prerender = true;
 import MarkdownContent from "../../components/username/content2";
 import Layout from "../../layouts/Layout.astro";
-import Navbar from "../../components/home/nav.astro";
-
+import Cta from "@/components/home/cta.astro";
+import '@/styles/globals.css'
 export async function getStaticPaths() {
   const response = await fetch(
     `https://strapi-production-71a1.up.railway.app/api/dp-blogs`
@@ -47,48 +47,36 @@ const formatDate = (dateString: string) => {
   ogUrl=`https://dinnerpart.studio/tidbits/${post.attributes.Slug}`
   ogImage={post.attributes.Thumbnail.data.attributes.url}
 >
-<Navbar/>
-
+  
 <main class="video-wrapper mirco-service-video-wrapper">
-      <!-- <header class="breadcrumb">
-        <nav aria-label="Breadcrumb">
-          <ul>
-            <li>
-              <a href="/tidbits">Tidbits/{post.attributes.Title}</a>
-            </li>
-           
-          </ul>
-        </nav>
-      </header> -->
-      
-      <section class="wrapper">
+    
+      <section class="wrapper" itemscope itemtype="http://schema.org/BlogPosting">
           <header class="blog-date-wrapper">
-               <time class="blog-date" datetime={formatDate(post.attributes.updatedAt)}>{formatDate(post.attributes.updatedAt)}</time>
-               <h1 class="blog-title">{post.attributes.Title}</h1>
-               <p class="read-time">Read time: {post.attributes.Readtime} mins</p>
-               <p class="read-time">Written by: {post.attributes.Author}</p>
+               <time class="blog-date" datetime={formatDate(post.attributes.updatedAt)} itemprop="datePublished">{formatDate(post.attributes.updatedAt)}</time>
+               <h1 class="blog-title" itemprop="headline">{post.attributes.Title}</h1>
+               <p class="read-time" itemprop="timeRequired">Read time: {post.attributes.Readtime} mins</p>
+               <p class="read-time" itemprop="author" itemscope itemtype="http://schema.org/Person">
+                 Written by: <span itemprop="name">{post.attributes.Author}</span>
+               </p>
           </header>
           {
             post.attributes.Link && post.attributes.Link.trim() !== "" ? (
-              <iframe class="thumbnail" src={post.attributes.Link} />
+              <iframe class="thumbnail" src={post.attributes.Link} itemprop="image" />
             ) : post.attributes.Thumbnail && post.attributes.Thumbnail.data && post.attributes.Thumbnail.data.attributes.url ? (
               <img
                 class="thumbnail"
                 src={post.attributes.Thumbnail.data.attributes.url}
                 alt={post.attributes.Thumbnail.data.attributes.alternativeText}
+                itemprop="image"
               />
             ) : null
           }
           
-          <MarkdownContent content={post.attributes.Content} />
-          <div class="mirco-service-cta-button-wrapper">
-            <a
-              class="mirco-service-cta-button"
-              target=”_blank”
-              href="https://app.formbricks.com/s/clzu6zoe50000c8nkwg15thwb">Get in touch</a
-            >
+          <div itemprop="articleBody">
+            <MarkdownContent content={post.attributes.Content} />
           </div>
-      </section>
+        </section>
+        <Cta/>
   </main>
 </Layout>
 
@@ -97,10 +85,8 @@ const formatDate = (dateString: string) => {
     font-family: "goudy_bookletter_1911";
     src: url("/font.woff") format("woff");
   }
-  body {
-    background-color: #101010;
+  body { 
     font-family: "goudy_bookletter_1911";
-    color: #fffbef;
   }
 
   .author{
@@ -110,7 +96,7 @@ const formatDate = (dateString: string) => {
   .thumbnail {
     width: 100%;
     height: auto;
-    background-color: #101010;
+
     border-radius: 15px;
   }
 
@@ -141,31 +127,16 @@ const formatDate = (dateString: string) => {
 
 
   .video-wrapper {
-    color: #fffbef;
+
     height: auto;
     width: 100vw;
     max-width: 100vw;
     overflow: hidden;
   }
 
-  h2{
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-size: 2rem;
-    padding: 0;
-    
-  }
-  h3{
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    font-size: 1.5rem;
-    padding: 0;
-    
-  }
   
 
   .mirco-service-video-wrapper {
-    height: 90%;
 
     padding-bottom: 1vh;
     display: flex;
@@ -173,10 +144,6 @@ const formatDate = (dateString: string) => {
     align-items: center;
     justify-content: center;
     font-size: 3rem;
-  }
-
-  .two {
-    color: #fffbef;
   }
 
 
@@ -192,7 +159,7 @@ const formatDate = (dateString: string) => {
   }
   .breadcrumb a{
     font-size: 1rem;
-    color: #fffbef;
+   
     text-decoration: none;
     padding: 0;
     margin: 0;
@@ -212,34 +179,7 @@ const formatDate = (dateString: string) => {
 
   }
 
-  .read-time{
-
-  }
-  .mirco-service-cta-button {
-    font-family: "Poppins", sans-serif;
-    font-weight: 900;
-    border: none;
-    background-color: #fffbef;
-    color: #101010;
-    font-size: 20px;
-    width:fit-content;
-    border-radius: 100px;
-    text-decoration: none;
-    padding: 10px 50px 10px 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .mirco-service-cta-button-wrapper {
-    width: 100%;
-    margin-top: 5vh;
-  }
-
-  .mirco-service-cta-button:hover {
-    cursor: pointer;
-  
-  }
+ 
 
   @media screen and (max-width: 880px) {
 

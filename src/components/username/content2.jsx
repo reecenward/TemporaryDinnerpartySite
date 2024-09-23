@@ -81,18 +81,18 @@ const MarkdownContent = ({ content }) => {
       },
     ],
     paragraph: {
-    
-      color: '#fffbef',
       fontSize: '1.5rem',
-      margin: 0,
+      marginBottom: 10,
       padding: 0,
     },
     heading: (level) => {
       const baseStyle = {
 
-        color: '#fffbef',
+
         fontWeight: 900,
         padding: 0,
+        marginTop: 25,
+        marginBottom: 5,
       };
       const fontSizeMap = {
         1: '3rem',
@@ -105,7 +105,7 @@ const MarkdownContent = ({ content }) => {
       return { ...baseStyle, fontSize: fontSizeMap[level] || '1.5rem' };
     },
     link: {
-      color: '#fffbef',
+
       fontSize: '1.5rem',
     },
     image: {
@@ -114,16 +114,16 @@ const MarkdownContent = ({ content }) => {
       borderRadius: '10px',
     },
     list: {
-      color: '#fffbef',
+   
       fontSize: '1.5rem',
     },
     bold: {
-      color: '#fffbef',
+   
       fontSize: '1.5rem',
       fontWeight: 'bold',
     },
     italic: {
-      color: '#fffbef',
+
       fontSize: '1.5rem',
       fontStyle: 'italic',
     },

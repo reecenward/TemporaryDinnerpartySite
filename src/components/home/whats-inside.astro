@@ -1,0 +1,86 @@
+---
+import MainCta from "../myComponents/main-cta.astro";
+---
+
+<section class="md:container md:mx-auto py-12 p-3">
+    <div class="flex flex-col items-center">
+        <div class="max-w-4xl">
+            <div class="p-6 sm:p-12 bg-[#4A46FF] rounded">
+                <h2 class="font-custom text-lg md:text-2xl">What's included?</h2>
+                <h3 class="font-poppins font-black text-2xl md:text-5xl">Everything you need for a powerful content strategy.</h3>
+            </div>
+            <div class="py-12 px-6">
+                <h3 class="font-custom text-2xl">1. Strategy</h3>
+                <h4>Uncover Insights, Define Direction</h4>
+                <p class="text-2xl">We start by learning about your brand’s goals, finding inspiration, and analyzing competitors. This helps us create a plan that fits your business.</p>
+            </div>
+            <hr>
+            <div class="py-12 px-6">
+                <h3 class="font-custom text-2xl">2. Blueprint</h3>
+                <h4>Design the Framework for Success</h4>
+                <p class="text-2xl">Next, we make a detailed plan for your content. This includes creating a style guide and planning the types of videos we’ll make.</p>
+            </div>
+            <hr>
+            <div class="py-12 px-6">
+                <h3 class="font-custom text-2xl">3. Creation</h3>
+                <h4>Bring Your Vision to Life</h4>
+                <p class="text-2xl">Now we get to work! We’ll film and edit your videos to make sure they’re perfect for your brand.</p>
+            </div>
+            <hr>
+            <div class="py-12 px-6">
+                <h3 class="font-custom text-2xl">4. Metrics</h3>
+                <h4>Track, Analyze, Improve</h4>
+                <p class="text-2xl">Once your content is live, we track its performance and make improvements based on the data.</p>
+                <div class="pt-12">
+                    <MainCta/>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @font-face {
+    font-family: "goudy_bookletter_1911";
+    src: url("/font.woff") format("woff");
+  }
+hr{
+    border-top: 1px solid #fffbef3b;
+}
+    p {
+        font-family: "goudy_bookletter_1911";
+    }
+    .l2o{
+position: relative;
+    }
+    .l2i{
+
+        position: sticky;
+        top: 0;
+    }
+  
+
+   
+    h4{
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+      font-size: 2rem;   
+    }
+
+    a{
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        border: none;
+        background-color: #fffbef;
+        color: #101010;
+        width:fit-content;
+        text-decoration: none;
+        padding: 10px 50px 10px 50px;
+    }
+
+
+    a:hover{
+        cursor: pointer;
+    }
+  </style>
+  

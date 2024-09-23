@@ -1,15 +1,10 @@
 ---
 import Layout from "@/layouts/Layout.astro";
-import LandingVideo from "@/components/home/landing-video.astro";
-import ContentSlider from "@/components/home/content-slider.astro";
-import BigLogo from "@/components/home/big-logo.astro";
-
-import About from "@/components/home/about.astro"
 import Faq from "@/components/home/faq.astro"
-import WhatsIncluded from "@/components/home/whats-inside.astro";
 import Cta from "@/components/home/cta.astro";
-import Brief from "@/components/home/breif.astro"
-import IsThisForMe from "@/components/home/Is-this-for-me.astro";
+import Us from "@/components/about/us.astro";
+import Igposts from "@/components/home/igposts.astro";
+import Process from "@/components/about/process.astro"
 import '@/styles/globals.css'
 ---
 
@@ -26,16 +21,15 @@ import '@/styles/globals.css'
     name="keywords"
     content="Vancouver, Social media marketing, Dinnerparty studio"
   />
-  <main >
-    <BigLogo />
-    <ContentSlider />
-    <LandingVideo />
-    <Brief/>
-    <WhatsIncluded/>
-    <!-- <IsThisForMe/> -->
-    <About/>
+  <main class=" overflow-hidden">
 
-    <Faq/>
-    <Cta/>
-  </main>
+
+    <Us/>
+    <Igposts/>
+    <!-- <Process/> -->
+    <!-- <Faq/>
+    <Cta/> -->
+
+</main>
+  
 </Layout>

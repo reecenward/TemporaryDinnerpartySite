@@ -1,0 +1,175 @@
+<div class="overflow-hidden ">
+
+
+<section class="md:container md:mx-auto py-12 px-3">
+    <div class="swiper2 w-screen h-auto ">
+        <div class="swiper-wrapper w-full h-auto flex items-center justify-start">
+          <div class="swiper-slide">
+            <div class="swiper-video-wrapper">
+              <div class="video-c">
+                <h3>Tired of Videos That Get Ignored?</h3>
+                <hr>
+     
+                <p>
+                    Most ads today fail because people have become experts at tuning them out. 
+                    They've gotten really good at tuning out anything that screams "buy me!".
+                    Your content is competing for attention, and the old approach just isn't working anymore.
+                </p>     
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-video-wrapper">
+              <div class="video-c">
+                <h3>We Do Things Differently.</h3>
+                <hr>
+         
+                <p>
+                    At Dinnerparty, we understand the risk of blending in and being overlooked. 
+                    Instead of pushing a message, we focus on crafting content that feels real, genuine, and engaging content that also resonates with your audience, not annoys them.
+                </p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="swiper-video-wrapper">
+              <div class="video-c">
+                <h3>Content That Actually Sticks!</h3>
+                <hr>
+            
+               <p>
+                
+                Mixing storytelling and captivating visuals, we create content that’s true to your brand and adds value for your audience. 
+                When your message feels authentic, it builds lasting connections with your community, helping your brand stand out in a noisy world.
+               </p>
+             
+              </div>
+            </div>
+          </div>
+        </div>
+      <!-- <div class="flex">
+        <div class="swiper-button-prev">Prev</div>
+        <div class="swiper-button-next">Next</div>
+      </div> -->
+    </div>
+    
+  </section>
+</div>
+  <!-- <Moving/> -->
+  
+  
+  <style>
+    @font-face {
+      font-family: "goudy_bookletter_1911";
+      src: url("/font.woff") format("woff");
+    }
+    h2 {
+          font-family: "Poppins", sans-serif;
+          font-weight: 900;
+          font-size: 3rem;
+      }
+      h3 {
+          font-family: "Poppins", sans-serif;
+          font-weight: 900;
+          font-size: 2rem;
+      }
+      .card{
+        /* background-color: #fffbef; */
+        height: 100px;
+        border-radius: 10px;
+      }
+      p{
+        font-family: "goudy_bookletter_1911";
+        font-size: 1.25rem;
+        padding-top: 10px;
+      }
+      hr{
+    border-top: 1px solid #101010;
+}
+    .swiper2 {
+      width: 100%;
+      height: 100%;
+      position: relative;
+
+  
+    }
+    .swiper-wrapper {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: start;
+    }
+  
+    .swiper-slide {
+      height: 400px;
+      width: 500px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .swiper-video-wrapper {
+      width: 500px;
+      height: 100%;
+      position: relative;
+    }
+  
+    .video-c {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      border-radius: 10px;
+      background-color: #fffbef;
+        color: #101010;
+      position: relative;
+
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+    }
+  
+   
+    @media only screen and (max-width: 900px) {
+      .swiper-video-wrapper {
+        width: 90vw;
+        height: 350px;
+      }
+      .swiper {
+        padding-top: 2.5vh;
+        padding-bottom: 2.5vh;
+      }
+    }
+  
+  </style>
+  
+    <script type="module">
+      import Swiper from "https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs";
+    
+      const swiper = new Swiper(".swiper2", {
+        direction: "horizontal",
+    
+      loop: true,
+      autoplay: false,
+      spaceBetween: 10,
+      freemode: true,
+      reverseDirection: true,
+      slidesPerView: "auto",
+  
+      breakpoints: {
+        1201: {
+          slidesPerView: 3,
+        },
+        900: {
+          slidesPerView: 1,
+        },
+      },
+      navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+    
+      });
+      </script> 

@@ -1,8 +1,65 @@
+---
+import Layout from "../layouts/Layout.astro"
+import { Button } from "@/components/ui/button"
+import '@/styles/globals.css'
+---
+<Layout
+title="Dinnerparty - Vancouver organic social media marketing studio"
+  description="Helping buisnesses in Vancouver grow organically and build strong communities threw social media."
+  ogTitle="Dinnerparty - Vancouver organic social media marketing studio"
+  ogDescription="Helping buisnesses in Vancouver grow organically and build strong communities threw social media."
+  ogType="website"
+  ogUrl="https://dinnerparty.studio/404"
+  ogImage={"."}
+>
 <article>
     <header>
-        <h1>Page not found</h1>
+        <h1>Oops... Page not found</h1>
     </header>
     <footer>
-        <a href="/">Go Home</a>
+       
+        <div class="mt-6 w-full flex justify-left">
+            <Button asChild>
+                <a href="/">Go Back Home</a>
+            </Button>
+        </div>
     </footer>
 </article>
+</Layout>
+
+<style>
+      @font-face {
+    font-family: "goudy_bookletter_1911";
+    src: url("/font.woff") format("woff");
+  }
+    *{
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+    }
+    article{
+        width: 100%;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    a{
+        font-family: "Poppins", sans-serif;
+        font-weight: 900;
+        border: none;
+        color: #fffbef;
+        background-color: #101010;
+        font-size: 20px;
+        width:fit-content;
+
+        text-decoration: none;
+        padding: 10px 50px 10px 50px;
+    }
+
+
+    a:hover{
+        cursor: pointer;
+    }
+
+</style>
