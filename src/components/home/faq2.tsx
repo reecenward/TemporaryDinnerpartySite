@@ -24,7 +24,7 @@ import {
         {data.map((item, i) => (
           <AccordionItem key={item.id} value={`item-${i.toFixed()}`}>
             <AccordionTrigger className="text-xl sm:text-2xl text-start font-poppins font-black p-6 mt-6">
-                <h2>{item.attributes.Question}</h2>
+                {item.attributes.Question}
             </AccordionTrigger>
             <AccordionContent className="text-xl sm:text-2xl font-custom p-6 pt-0">
                 {item.attributes.Awnser}
