@@ -109,8 +109,8 @@ const MarkdownContent = ({ content }) => {
       fontSize: '1.5rem',
     },
     image: {
-      width: '100%',
-      height: '100%',
+      width: 'auto',
+      height: '500px',
       borderRadius: '10px',
     },
     list: {
